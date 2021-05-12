@@ -8,9 +8,19 @@ import (
 	"github.com/jtblin/go-ldap-client"
 )
 
-var key string
+var (
+	key string
+	version string
+)
 
 func main() {
+
+	if len(os.Args) > 1 {
+		if os.Args[1] == "-v" {
+			fmt.Println(version)
+			os.Exit(0)
+		}
+	}
 
 	base := os.Getenv("LDAP_Base")
 	host := os.Getenv("LDAP_Host")
