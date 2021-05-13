@@ -1,1 +1,6 @@
 *.txt
+/sample/config.yaml
+/sample/docker-compose.yaml
+/sample/Dockerfile
+/sample/receiver
+/Dockerfile
