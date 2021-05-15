@@ -27,7 +27,7 @@ func main() {
 	if err != nil {
 	  fmt.Println("Command Exec Error.")
 	}
-	fmt.Printf("bluedeploy extension version: %s", string(extv))
+	fmt.Printf("bluedeploy extension version: %s\n\n", string(extv))
 	go Run()
 
 	t := time.NewTimer(86400 * time.Second)
