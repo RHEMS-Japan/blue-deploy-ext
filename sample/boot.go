@@ -30,7 +30,7 @@ func main() {
 	fmt.Printf("bluedeploy extension version: %s", string(extv))
 	go Run()
 
-	t := time.NewTimer(60 * time.Second)
+	t := time.NewTimer(86400 * time.Second)
 
 	<-t.C
 
