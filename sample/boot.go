@@ -21,13 +21,13 @@ func main() {
 	if err != nil {
 		log.Fatalf("receiver version check error : %s", err)
 	}
-	fmt.Printf("bluedeploy version: \n%s", string(out))
+	fmt.Printf("bluedeploy version: %s", string(out))
 
 	extv, err := exec.Command("/usr/local/bin/blue-deploy-ext", "-v").Output()
 	if err != nil {
 	  fmt.Println("Command Exec Error.")
 	}
-	fmt.Printf("bluedeploy extension version: \n%s", string(extv))
+	fmt.Printf("bluedeploy extension version: %s", string(extv))
 	go Run()
 
 	t := time.NewTimer(60 * time.Second)
