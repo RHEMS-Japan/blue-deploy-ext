@@ -14,18 +14,21 @@ var (
 )
 
 func main() {
+	base := os.Getenv("LDAP_Base")
+	host := os.Getenv("LDAP_Host")
+	user := os.Getenv("LDAP_User")
+	pass := os.Getenv("LDAP_Pass")
 
 	if len(os.Args) > 1 {
 		if os.Args[1] == "-v" {
 			fmt.Println(version)
 			os.Exit(0)
 		}
+		if os.Args[1] == "-u" {
+			fmt.Print(user)
+			os.Exit(0)
+		}
 	}
-
-	base := os.Getenv("LDAP_Base")
-	host := os.Getenv("LDAP_Host")
-	user := os.Getenv("LDAP_User")
-	pass := os.Getenv("LDAP_Pass")
 
 	client := &ldap.LDAPClient{
 		Base:        base,
