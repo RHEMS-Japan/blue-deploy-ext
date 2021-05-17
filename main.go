@@ -18,6 +18,7 @@ func main() {
 	host := os.Getenv("LDAP_Host")
 	user := os.Getenv("LDAP_User")
 	pass := os.Getenv("LDAP_Pass")
+	doc  := os.Getenv("Fs_Doc")
 
 	if len(os.Args) > 1 {
 		if os.Args[1] == "-v" {
@@ -26,6 +27,10 @@ func main() {
 		}
 		if os.Args[1] == "-u" {
 			fmt.Print(user)
+			os.Exit(0)
+		}
+		if os.Args[1] == "-t" {
+			fmt.Print(doc)
 			os.Exit(0)
 		}
 	}
