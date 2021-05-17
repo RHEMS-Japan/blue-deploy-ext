@@ -18,7 +18,7 @@ func main() {
 	host := os.Getenv("LDAP_Host")
 	user := os.Getenv("LDAP_User")
 	pass := os.Getenv("LDAP_Pass")
-	doc  := os.Getenv("Fs_Doc")
+	doc  := os.Getenv("AwsProject")
 
 	if len(os.Args) > 1 {
 		if os.Args[1] == "-v" {
